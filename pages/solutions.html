@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Access comprehensive textbook solutions for SSC & HSC students - StudyHub">
+    <meta name="keywords" content="textbook solutions, SSC solutions, HSC solutions, Bangladesh education, step-by-step solutions">
+    <title>Book Solutions | StudyHub</title>
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="../assets/css/style.css" as="style">
+    <link rel="preload" href="../assets/css/solutions.css" as="style">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/solutions.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logo.svg" alt="StudyHub Logo">
+                <span>StudyHub</span>
+            </a>
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <div class="sidebar-content">
+            <div class="user-profile-mini">
+                <img src="../assets/images/avatar.jpg" alt="User Avatar" class="user-avatar">
+                <div class="user-info">
+                    <h3 id="userName">Student Name</h3>
+                    <span class="user-class" id="userClass">Class & Group</span>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <a href="dashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="courses.html">
+                            <i class="fas fa-book"></i>
+                            <span>My Courses</span>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="solutions.html">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Book Solutions</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="board-questions.html">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Board Questions</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mcq.html">
+                            <i class="fas fa-tasks"></i>
+                            <span>MCQ Practice</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cheatsheets.html">
+                            <i class="fas fa-sticky-note"></i>
+                            <span>Cheatsheets</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <i class="fas fa-user"></i>
+                            <span>My Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="settings.html">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="#" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="main-header">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search for solutions, chapters, or exercises...">
+            </div>
+            
+            <div class="header-actions">
+                <button class="notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">2</span>
+                </button>
+                
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </header>
+        
+        <div class="solutions-hero">
+            <div class="solutions-hero-content">
+                <h1>Textbook Solutions</h1>
+                <p>Access step-by-step solutions for all your textbook exercises and problems</p>
+            </div>
+            <div class="solutions-hero-image">
+                <img src="../assets/images/solutions-hero.svg" alt="Book Solutions Illustration">
+            </div>
+        </div>
+        
+        <div class="solutions-filters">
+            <div class="filter-group">
+                <label for="classFilter">Class</label>
+                <select id="classFilter" class="filter-select">
+                    <option value="all">All Classes</option>
+                    <option value="class-9">Class 9</option>
+                    <option value="class-10">Class 10</option>
+                    <option value="class-11">Class 11</option>
+                    <option value="class-12">Class 12</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="subjectFilter">Subject</label>
+                <select id="subjectFilter" class="filter-select">
+                    <option value="all">All Subjects</option>
+                    <option value="physics">Physics</option>
+                    <option value="chemistry">Chemistry</option>
+                    <option value="biology">Biology</option>
+                    <option value="mathematics">Mathematics</option>
+                    <option value="english">English</option>
+                    <option value="bangla">Bangla</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label for="chapterFilter">Chapter</label>
+                <select id="chapterFilter" class="filter-select">
+                    <option value="all">All Chapters</option>
+                    <option value="chapter-1">Chapter 1</option>
+                    <option value="chapter-2">Chapter 2</option>
+                    <option value="chapter-3">Chapter 3</option>
+                    <option value="chapter-4">Chapter 4</option>
+                    <option value="chapter-5">Chapter 5</option>
+                </select>
+            </div>
+            
+            <button class="filter-reset">
+                <i class="fas fa-redo-alt"></i>
+                Reset Filters
+            </button>
+        </div>
+        
+        <div class="solutions-grid">
+            <!-- Physics Book -->
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="../assets/images/books/physics.jpg" alt="Physics Textbook">
+                    <div class="book-badge">SSC</div>
+                </div>
+                <div class="book-info">
+                    <h3>Physics</h3>
+                    <p>Class 10 • NCTB</p>
+                    <div class="book-stats">
+                        <span><i class="fas fa-book-open"></i> 12 Chapters</span>
+                        <span><i class="fas fa-lightbulb"></i> 240+ Solutions</span>
+                    </div>
+                    <a href="physics-solutions.html" class="book-btn">View Solutions</a>
+                </div>
+            </div>
+            
+            <!-- Chemistry Book -->
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="../assets/images/books/chemistry.jpg" alt="Chemistry Textbook">
+                    <div class="book-badge">SSC</div>
+                </div>
+                <div class="book-info">
+                    <h3>Chemistry</h3>
+                    <p>Class 10 • NCTB</p>
+                    <div class="book-stats">
+                        <span><i class="fas fa-book-open"></i> 14 Chapters</span>
+                        <span><i class="fas fa-lightbulb"></i> 280+ Solutions</span>
+                    </div>
+                    <a href="chemistry-solutions.html" class="book-btn">View Solutions</a>
+                </div>
+            </div>
+            
+            <!-- Biology Book -->
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="../assets/images/books/biology.jpg" alt="Biology Textbook">
+                    <div class="book-badge">SSC</div>
+                </div>
+                <div class="book-info">
+                    <h3>Biology</h3>
+                    <p>Class 10 • NCTB</p>
+                    <div class="book-stats">
+                        <span><i class="fas fa-book-open"></i> 10 Chapters</span>
+                        <span><i class="fas fa-lightbulb"></i> 220+ Solutions</span>
+                    </div>
+                    <a href="biology-solutions.html" class="book-btn">View Solutions</a>
+                </div>
+            </div>
+            
+            <!-- Mathematics Book -->
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="../assets/images/books/mathematics.jpg" alt="Mathematics Textbook">
+                    <div class="book-badge">SSC</div>
+                </div>
+                <div class="book-info">
+                    <h3>Mathematics</h3>
+                    <p>Class 10 • NCTB</p>
+                    <div class="book-stats">
+                        <span><i class="fas fa-book-open"></i> 16 Chapters</span>
+                        <span><i class="fas fa-lightbulb"></i> 350+ Solutions</span>
+                    </div>
+                    <a href="mathematics-solutions.html" class="book-btn">View Solutions</a>
+                </div>
+            </div>
+            
+            <!-- Higher Mathematics Book -->
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="../assets/images/books/higher-math.jpg" alt="Higher Mathematics Textbook">
+                    <div class="book-badge">SSC</div>
+                </div>
+                <div class="book-info">
+                    <h3>Higher Mathematics</h3>
+                    <p>Class 10 • NCTB</p>
+                    <div class="book-stats">
+                        <span><i class="fas fa-book-open"></i> 14 Chapters</span>
+                        <span><i class="fas fa-lightbulb"></i> 300+ Solutions</span>
+                    </div>
+                    <a href="higher-math-solutions.html" class="book-btn">View Solutions</a>
+                </div>
+            </div>
+            
+            <!-- English Book -->
+            <div class="book-card">
+                <div class="book-cover">
+                    <img src="../assets/images/books/english.jpg" alt="English Textbook">
+                    <div class="book-badge">SSC</div>
+                </div>
+                <div class="book-info">
+                    <h3>English</h3>
+                    <p>Class 10 • NCTB</p>
+                    <div class="book-stats">
+                        <span><i class="fas fa-book-open"></i> 15 Units</span>
+                        <span><i class="fas fa-lightbulb"></i> 180+ Solutions</span>
+                    </div>
+                    <a href="english-solutions.html" class="book-btn">View Solutions</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="recently-viewed">
+            <h2>Recently Viewed Solutions</h2>
+            <div class="recent-solutions">
+                <div class="solution-card">
+                    <div class="solution-icon physics">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <div class="solution-info">
+                        <h3>Physics: Chapter 5</h3>
+                        <p>Work, Energy and Power</p>
+                        <span class="solution-meta">Exercise 5.3 • Problems 1-10</span>
+                    </div>
+                    <a href="#" class="solution-link">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon math">
+                        <i class="fas fa-square-root-alt"></i>
+                    </div>
+                    <div class="solution-info">
+                        <h3>Mathematics: Chapter 8</h3>
+                        <p>Trigonometric Ratios</p>
+                        <span class="solution-meta">Exercise 8.2 • Problems 5-15</span>
+                    </div>
+                    <a href="#" class="solution-link">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="solution-card">
+                    <div class="solution-icon chemistry">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="solution-info">
+                        <h3>Chemistry: Chapter 3</h3>
+                        <p>Periodic Table and Chemical Bonding</p>
+                        <span class="solution-meta">Exercise 3.5 • Problems 1-8</span>
+                    </div>
+                    <a href="#" class="solution-link">
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="solutions-faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How do I access solutions for a specific chapter?</h3>
+                        <button class="faq-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Select your textbook from the grid above, then navigate to the specific chapter you need help with. You can also use the filters at the top to quickly find solutions for a particular class, subject, or chapter.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Are all the solutions step-by-step?</h3>
+                        <button class="faq-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! All our solutions include detailed step-by-step explanations to help you understand the concepts and problem-solving techniques. We break down complex problems into manageable steps with clear explanations at each stage.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Can I download solutions for offline use?</h3>
+                        <button class="faq-toggle">
+                            <i class="fas fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Premium members can download solutions as PDF files for offline study. This feature is available for all textbooks and chapters in our library. To download, look for the download icon when viewing a solution.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/solutions.js"></script>
+</body>
+</html>

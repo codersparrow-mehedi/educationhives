@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Join StudyHub - Your ultimate learning companion for SSC & HSC exams">
+    <meta name="keywords" content="signup, register, SSC, HSC, Bangladesh education, student portal">
+    <title>Join StudyHub | Your Learning Journey Starts Here</title>
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="../../assets/css/style.css" as="style">
+    <link rel="preload" href="../../assets/css/signup.css" as="style">
+    <link rel="preload" href="../../assets/js/auth.js" as="script">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/signup.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../../assets/images/favicon.ico" type="image/x-icon">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="signup-page">
+        <div class="signup-container">
+            <!-- Left Side - Illustration and Info -->
+            <div class="signup-left">
+                <div class="brand">
+                    <a href="../../index.html">
+                        <img src="../../assets/images/logo.svg" alt="StudyHub Logo">
+                        <span>StudyHub</span>
+                    </a>
+                </div>
+                
+                <div class="illustration">
+                    <img src="../../assets/images/student-illustration.svg" alt="Student studying illustration">
+                </div>
+                
+                <div class="features">
+                    <h2>Why Join StudyHub?</h2>
+                    <ul>
+                        <li>
+                            <i class="fas fa-book-open"></i>
+                            <div>
+                                <h3>Complete Book Solutions</h3>
+                                <p>Access step-by-step solutions for all SSC & HSC textbooks</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clipboard-check"></i>
+                            <div>
+                                <h3>Board Question Bank</h3>
+                                <p>Practice with previous years' board questions and solutions</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-tasks"></i>
+                            <div>
+                                <h3>Interactive MCQ Practice</h3>
+                                <p>Test your knowledge with subject-wise MCQ tests</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-chart-line"></i>
+                            <div>
+                                <h3>Track Your Progress</h3>
+                                <p>Monitor your performance and identify improvement areas</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="quote">
+                        <i class="fas fa-quote-left"></i>
+                        <p>StudyHub helped me score GPA 5.0 in my SSC exams. The practice tests and solutions were incredibly helpful!</p>
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <div class="student">
+                        <img src="../../assets/images/student-avatar.jpg" alt="Student testimonial">
+                        <div>
+                            <h4>Rahima Akter</h4>
+                            <p>SSC 2023, Dhaka Board</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Right Side - Signup Form -->
+            <div class="signup-right">
+                <div class="form-header">
+                    <h1>Create Your Account</h1>
+                    <p>Join thousands of students achieving academic excellence</p>
+                </div>
+                
+                <div class="social-signup">
+                    <button class="social-btn google">
+                        <i class="fab fa-google"></i>
+                        Continue with Google
+                    </button>
+                    <button class="social-btn facebook">
+                        <i class="fab fa-facebook-f"></i>
+                        Continue with Facebook
+                    </button>
+                </div>
+                
+                <div class="divider">
+                    <span>or sign up with email</span>
+                </div>
+                
+                <form id="signupForm" class="signup-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="firstName" placeholder="Your first name" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="lastName" placeholder="Your last name" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" placeholder="Your email address" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-lock"></i>
+                            <input type="password" id="password" placeholder="Create a strong password" required>
+                            <button type="button" class="password-toggle">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                        </div>
+                        <div class="password-strength">
+                            <div class="strength-meter">
+                                <span></span><span></span><span></span><span></span>
+                            </div>
+                            <p class="strength-text">Password strength</p>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="studentClass">Your Class</label>
+                        <div class="input-with-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                            <select id="studentClass" required>
+                                <option value="" disabled selected>Select your class</option>
+                                <optgroup label="SSC">
+                                    <option value="class-9">Class 9</option>
+                                    <option value="class-10">Class 10</option>
+                                </optgroup>
+                                <optgroup label="HSC">
+                                    <option value="class-11">Class 11</option>
+                                    <option value="class-12">Class 12</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group checkbox">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                    </div>
+                    
+                    <button type="submit" class="signup-btn">Create Account</button>
+                </form>
+                
+                <div class="form-footer">
+                    <p>Already have an account? <a href="login.html">Log in</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Scripts -->
+    <script src="../../assets/js/auth.js" defer></script>
+</body>
+</html> 

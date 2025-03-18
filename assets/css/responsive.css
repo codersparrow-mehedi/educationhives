@@ -1,0 +1,548 @@
+/* Responsive Styles for StudyHub SSC & HSC Portal */
+
+/* Large Desktops (1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+    
+    .hero-content h1 {
+        font-size: 3.5rem;
+    }
+}
+
+/* Medium Desktops (992px to 1199px) */
+@media (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    
+    .feature-card {
+        padding: 25px 20px;
+    }
+}
+
+/* Tablets and Small Desktops (768px to 991px) */
+@media (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .hero .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .hero-content {
+        order: 1;
+    }
+    
+    .hero-image {
+        order: 0;
+        margin-bottom: 30px;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-about {
+        grid-column: span 2;
+    }
+    
+    .dashboard-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .recent-activity, 
+    .upcoming-exams {
+        width: 100%;
+    }
+    
+    .cheatsheet-card {
+        flex-direction: column;
+    }
+    
+    .cheatsheet-image {
+        flex: 0 0 200px;
+        width: 100%;
+    }
+}
+
+/* Large Mobile Devices (576px to 767px) */
+@media (max-width: 767px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    .header .container {
+        flex-wrap: wrap;
+    }
+    
+    .main-nav {
+        display: none;
+        width: 100%;
+        order: 3;
+        margin-top: 15px;
+    }
+    
+    .main-nav.active {
+        display: block;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .main-nav ul li {
+        width: 100%;
+    }
+    
+    .main-nav ul li a {
+        display: block;
+        padding: 12px 0;
+        border-bottom: 1px solid #eee;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+        order: 2;
+    }
+    
+    .auth-buttons {
+        margin-left: auto;
+        order: 1;
+    }
+    
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .subjects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .cta h2 {
+        font-size: 2rem;
+    }
+    
+    .cta p {
+        font-size: 1rem;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .footer-bottom-links {
+        justify-content: center;
+    }
+    
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+    
+    .dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .solutions-filters {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .filter-group {
+        width: 100%;
+    }
+    
+    .solutions-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .mcq-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+}
+
+/* Small Mobile Devices (Up to 575px) */
+@media (max-width: 575px) {
+    .container {
+        width: 100%;
+        padding: 0 15px;
+    }
+    
+    .hero {
+        padding: 40px 0;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .subjects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tabs {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .tab-btn {
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+        border: 1px solid #eee;
+        border-radius: var(--border-radius);
+    }
+    
+    .tab-btn.active {
+        border-color: var(--primary-color);
+        background-color: rgba(67, 97, 238, 0.1);
+    }
+    
+    .testimonial-card {
+        padding: 20px 15px;
+    }
+    
+    .cta {
+        padding: 50px 0;
+    }
+    
+    .cta h2 {
+        font-size: 1.5rem;
+    }
+    
+    .auth-container {
+        padding: 30px 20px;
+    }
+    
+    .question-dots {
+        gap: 8px;
+    }
+    
+    .question-dot {
+        width: 30px;
+        height: 30px;
+        font-size: 0.8rem;
+    }
+    
+    .mcq-navigation {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .mcq-navigation .btn {
+        width: 100%;
+    }
+}
+
+/* Mobile Menu Animation */
+@media (max-width: 767px) {
+    .mobile-menu-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    
+    /* Mobile Dropdown Animation */
+    .main-nav.active {
+        animation: slideDown 0.3s ease forwards;
+    }
+    
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}
+
+/* Print Styles */
+@media print {
+    header, 
+    footer, 
+    .cta,
+    .auth-buttons,
+    .mobile-menu-toggle {
+        display: none !important;
+    }
+    
+    body {
+        background-color: white;
+        color: black;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    .cheatsheet-card,
+    .solution-card,
+    .feature-card {
+        break-inside: avoid;
+        page-break-inside: avoid;
+        box-shadow: none;
+        border: 1px solid #ddd;
+    }
+    
+    .hero {
+        padding: 20px 0;
+        background: none;
+    }
+    
+    .hero-image {
+        display: none;
+    }
+    
+    .hero-content {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .hero-buttons {
+        display: none;
+    }
+}
+
+/* High-contrast mode for accessibility */
+@media (prefers-contrast: high) {
+    :root {
+        --primary-color: #0000ff;
+        --secondary-color: #000080;
+        --accent-color: #ff0000;
+        --text-color: #000000;
+        --text-light: #333333;
+        --bg-color: #ffffff;
+        --bg-light: #f0f0f0;
+    }
+    
+    .btn, 
+    .feature-card, 
+    .subject-card,
+    .solution-card,
+    .cheatsheet-card,
+    .testimonial-card,
+    .auth-container {
+        border: 2px solid black;
+    }
+    
+    .btn-primary,
+    .btn-outline:hover {
+        color: white;
+        background-color: black;
+    }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+    
+    .feature-card:hover,
+    .solution-card:hover,
+    .cheatsheet-card:hover,
+    .subject-card:hover {
+        transform: none !important;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-color: #121212;
+        --bg-light: #1e1e1e;
+        --bg-dark: #000000;
+        --text-color: #f5f5f5;
+        --text-light: #b0b0b0;
+        --primary-color: #738bff;
+        --secondary-color: #a58eff;
+    }
+    
+    .logo a {
+        color: var(--text-color);
+    }
+    
+    .feature-card,
+    .testimonial-card,
+    .auth-container,
+    .dashboard-content > div,
+    .solution-card,
+    .cheatsheet-card {
+        background-color: #1a1a1a;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+    
+    .subject-card {
+        background-color: #1a1a1a;
+    }
+    
+    .form-control {
+        background-color: #2a2a2a;
+        border-color: #444;
+        color: var(--text-color);
+    }
+    
+    .form-control:focus {
+        box-shadow: 0 0 0 3px rgba(115, 139, 255, 0.3);
+    }
+    
+    .option-item {
+        border-color: #444;
+    }
+    
+    .option-item:hover {
+        background-color: rgba(115, 139, 255, 0.1);
+    }
+    
+    .header {
+        background-color: #121212;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+    
+    .hero {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    }
+    
+    .mobile-menu-toggle span {
+        background-color: var(--text-color);
+    }
+    
+    .main-nav ul li a {
+        color: var(--text-color);
+    }
+    
+    @media (max-width: 767px) {
+        .main-nav ul li a {
+            border-bottom-color: #333;
+        }
+    }
+}
+
+/* Landscape orientation adjustments for tablets */
+@media (max-width: 991px) and (orientation: landscape) {
+    .hero {
+        padding: 40px 0;
+    }
+    
+    .hero .container {
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+    }
+    
+    .hero-content {
+        order: 0;
+    }
+    
+    .hero-image {
+        order: 1;
+        margin-bottom: 0;
+    }
+    
+    .hero-buttons {
+        justify-content: flex-start;
+    }
+}
+
+/* Specific adjustments for very small devices */
+@media (max-width: 320px) {
+    .hero-content h1 {
+        font-size: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+    }
+    
+    .feature-icon img,
+    .subject-card img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .auth-container {
+        padding: 20px 15px;
+    }
+    
+    .form-control {
+        padding: 10px;
+    }
+    
+    .btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+} 

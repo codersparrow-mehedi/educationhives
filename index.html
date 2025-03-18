@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="StudyHub - Your complete SSC & HSC study companion with book solutions, board questions, MCQ practice, and cheatsheets">
+    <meta name="keywords" content="SSC, HSC, Bangladesh education, book solutions, board questions, MCQ practice, cheatsheets">
+    <title>StudyHub - SSC & HSC Study Companion</title>
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="assets/css/style.css" as="style">
+    <link rel="preload" href="assets/js/main.js" as="script">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header with Navbar -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo.svg" alt="StudyHub Logo">
+                    <span>StudyHub</span>
+                </a>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="pages/solutions.html">Book Solutions</a></li>
+                    <li><a href="pages/board-questions.html">Board Questions</a></li>
+                    <li><a href="pages/mcq.html">MCQ Practice</a></li>
+                    <li><a href="pages/cheatsheets.html">Cheatsheets</a></li>
+                </ul>
+            </nav>
+            
+            <div class="auth-buttons">
+                <a href="pages/auth/login.html" class="btn btn-outline">Login</a>
+                <a href="pages/auth/signup.html" class="btn btn-primary">Sign Up</a>
+            </div>
+            
+            <button class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Ace Your SSC & HSC Exams</h1>
+                    <p>Complete study resources to help you excel in your board exams. Join thousands of students already improving their grades.</p>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="stat-number">50,000+</span>
+                            <span class="stat-label">Students</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">10,000+</span>
+                            <span class="stat-label">Solutions</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">95%</span>
+                            <span class="stat-label">Success Rate</span>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="pages/auth/signup.html" class="btn btn-primary btn-lg">Get Started Free</a>
+                        <a href="#how-it-works" class="btn btn-outline btn-lg">See How It Works</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/images/hero-illustration.svg" alt="Students studying together">
+                    <div class="floating-badge badge-1">
+                        <i class="fas fa-check-circle"></i>
+                        <span>GPA 5.0 Success</span>
+                    </div>
+                    <div class="floating-badge badge-2">
+                        <i class="fas fa-star"></i>
+                        <span>Top Rated</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-shape"></div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Everything You Need to Excel</h2>
+                <p>Comprehensive study resources designed specifically for SSC and HSC students</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Book Solutions</h3>
+                    <p>Step-by-step solutions to all textbook problems for both SSC and HSC levels.</p>
+                    <a href="pages/solutions.html" class="feature-link">Explore Solutions <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Board Questions</h3>
+                    <p>Previous years' board questions with detailed explanations and answer keys.</p>
+                    <a href="pages/board-questions.html" class="feature-link">View Questions <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>MCQ Practice</h3>
+                    <p>Interactive MCQ tests with instant feedback to prepare for your exams.</p>
+                    <a href="pages/mcq.html" class="feature-link">Take a Test <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sticky-note"></i>
+                    </div>
+                    <h3>Cheatsheets</h3>
+                    <p>Concise summaries of key concepts and formulas for quick revision.</p>
+                    <a href="pages/cheatsheets.html" class="feature-link">Download Cheatsheets <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2>How StudyHub Works</h2>
+                <p>Simple steps to improve your academic performance</p>
+            </div>
+            
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Create Your Account</h3>
+                        <p>Sign up for free and set up your profile with your class and subjects.</p>
+                    </div>
+                    <div class="step-image">
+                        <img src="assets/images/step1.svg" alt="Create account">
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Access Study Materials</h3>
+                        <p>Browse through our comprehensive collection of study resources.</p>
+                    </div>
+                    <div class="step-image">
+                        <img src="assets/images/step2.svg" alt="Access materials">
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Practice & Learn</h3>
+                        <p>Solve problems, take tests, and track your progress over time.</p>
+                    </div>
+                    <div class="step-image">
+                        <img src="assets/images/step3.svg" alt="Practice and learn">
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Ace Your Exams</h3>
+                        <p>Improve your grades and achieve academic success.</p>
+                    </div>
+                    <div class="step-image">
+                        <img src="assets/images/step4.svg" alt="Ace exams">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subjects Section -->
+    <section class="subjects">
+        <div class="container">
+            <div class="section-header">
+                <h2>Subjects We Cover</h2>
+                <p>Comprehensive resources for all major SSC and HSC subjects</p>
+            </div>
+            
+            <div class="tabs">
+                <button class="tab-btn active" data-target="ssc">S.S.C.</button>
+                <button class="tab-btn" data-target="hsc">H.S.C.</button>
+            </div>
+            
+            <div class="tab-content">
+                <div id="ssc" class="tab-pane active">
+                    <div class="subjects-grid">
+                        <div class="subject-card">
+                            <div class="subject-icon">
+                                <img src="assets/images/subjects/mathematics.svg" alt="Mathematics">
+                            </div>
+                            <h3>Mathematics</h3>
+                            <div class="subject-stats">
+                                <div class="stat">
+                                    <span class="stat-number">250+</span>
+                                    <span class="stat-label">Problems</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">15</span>
+                                    <span class="stat-label">Chapters</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-outline btn-sm">Explore</a>
+                        </div>
+                        
+                        <div class="subject-card">
+                            <div class="subject-icon">
+                                <img src="assets/images/subjects/physics.svg" alt="Physics">
+                            </div>
+                            <h3>Physics</h3>
+                            <div class="subject-stats">
+                                <div class="stat">
+                                    <span class="stat-number">200+</span>
+                                    <span class="stat-label">Problems</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">12</span>
+                                    <span class="stat-label">Chapters</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-outline btn-sm">Explore</a>
+                        </div>
+                        
+                        <div class="subject-card">
+                            <div class="subject-icon">
+                                <img src="assets/images/subjects/chemistry.svg" alt="Chemistry">
+                            </div>
+                            <h3>Chemistry</h3>
+                            <div class="subject-stats">
+                                <div class="stat">
+                                    <span class="stat-number">180+</span>
+                                    <span class="stat-label">Problems</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">14</span>
+                                    <span class="stat-label">Chapters</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-outline btn-sm">Explore</a>
+                        </div>
+                        
+                        <div class="subject-card">
+                            <div class="subject-icon">
+                                <img src="assets/images/subjects/biology.svg" alt="Biology">
+                            </div>
+                            <h3>Biology</h3>
+                            <div class="subject-stats">
+                                <div class="stat">
+                                    <span class="stat-number">220+</span>
+                                    <span class="stat-label">Problems</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">16</span>
+                                    <span class="stat-label">Chapters</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-outline btn-sm">Explore</a>
+                        </div>
+                        
+                        <div class="subject-card">
+                            <div class="subject-icon">
+                                <img src="assets/images/subjects/english.svg" alt="English">
+                            </div>
+                            <h3>English</h3>
+                            <div class="subject-stats">
+                                <div class="stat">
+                                    <span class="stat-number">150+</span>
+                                    <span class="stat-label">Exercises</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">10</span>
+                                    <span class="stat-label">Units</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-outline btn-sm">Explore</a>
+                        </div>
+                        
+                        <div class="subject-card">
+                            <div class="subject-icon">
+                                <img src="assets/images/subjects/bangla.svg" alt="Bangla">
+                            </div>
+                            <h3>Bangla</h3>
+                            <div class="subject-stats">
+                                <div class="stat">
+                                    <span class="stat-number">180+</span>
+                                    <span class="stat-label">Exercises</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">12</span>
+                                    <span class="stat-label">Units</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-outline btn-sm">Explore</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="hsc" class="tab-pane">
+                    <div class="subjects-grid">
+                        <!-- Similar structure for HSC subjects -->
+                        <div class="subject-card">
+                            <div class="subject-icon">
+                                <img src="assets/images/subjects/mathematics.svg" alt="Mathematics">
+                            </div>
+                            <h3>Mathematics</h3>
+                            <div class="subject-stats">
+                                <div class="stat">
+                                    <span class="stat-number">300+</span>
+                                    <span class="stat-label">Problems</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-number">18</span>
+                                    <span class="stat-label">Chapters</span>
+                                </div>
+                            </div>
+                            <a href="#" class="btn btn-outline btn-sm">Explore</a>
+                        </div>
+                        
+                        <!-- Add more HSC subjects here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Students Say</h2>
+                <p>Join thousands of students who have improved their grades with StudyHub</p>
+            </div>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"StudyHub helped me score GPA 5.0 in my SSC exams. The MCQ practice tests were especially helpful!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="assets/images/testimonials/student1.jpg" alt="Student">
+                        <div>
+                            <h4>Rahima Akter</h4>
+                            <p>SSC 2023, Dhaka</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"The cheatsheets and board question solutions made my HSC preparation so much easier. Highly recommended!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="assets/images/testimonials/student2.jpg" alt="Student">
+                        <div>
+                            <h4>Karim Ahmed</h4>
+                            <p>HSC 2022, Chittagong</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"I love how I can track my progress on the dashboard. It motivates me to keep improving my scores."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="assets/images/testimonials/student3.jpg" alt="Student">
+                        <div>
+                            <h4>Nusrat Jahan</h4>
+                            <p>HSC 2023, Sylhet</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="stat-number" data-count="50000">0</div>
+                    <div class="stat-label">Students</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="stat-number" data-count="10000">0</div>
+                    <div class="stat-label">Solutions</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="stat-number" data-count="95">0</div>
+                    <div class="stat-label">Success Rate %</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-number" data-count="5">0</div>
+                    <div class="stat-label">Years of Excellence</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Boost Your Academic Performance?</h2>
+                <p>Join thousands of students who are already excelling with StudyHub.</p>
+                <a href="pages/auth/signup.html" class="btn btn-primary btn-lg">Sign Up Now - It's Free!</a>
+                <div class="cta-features">
+                    <div class="cta-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>No Credit Card Required</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Cancel Anytime</span>
+                    </div>
+                    <div class="cta-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>24/7 Support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="assets/images/logo.svg" alt="StudyHub Logo" class="footer-logo">
+                    <p>StudyHub is the ultimate learning companion for SSC and HSC students in Bangladesh, providing comprehensive study resources.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="pages/solutions.html">Book Solutions</a></li>
+                        <li><a href="pages/board-questions.html">Board Questions</a></li>
+                        <li><a href="pages/mcq.html">MCQ Practice</a></li>
+                        <li><a href="pages/cheatsheets.html">Cheatsheets</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Study Tips</a></li>
+                        <li><a href="#">Exam Calendar</a></li>
+                        <li><a href="#">Video Tutorials</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <a href="mailto:support@studyhub.com" class="footer-contact-item">
+                        <i class="fas fa-envelope"></i>
+                        support@studyhub.com
+                    </a>
+                    <a href="tel:+8801234567890" class="footer-contact-item">
+                        <i class="fas fa-phone"></i>
+                        +880 1234 567890
+                    </a>
+                    <a href="https://maps.google.com/?q=Dhaka,Bangladesh" target="_blank" rel="noopener noreferrer" class="footer-contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        Dhaka, Bangladesh
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2023 StudyHub. All rights reserved.</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html> 

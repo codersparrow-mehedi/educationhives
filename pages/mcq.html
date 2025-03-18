@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Practice MCQ tests for SSC & HSC exams - Improve your knowledge with subject-wise multiple choice questions">
+    <meta name="keywords" content="MCQ practice, SSC MCQ, HSC MCQ, multiple choice questions, online test, exam preparation">
+    <title>MCQ Practice | StudyHub</title>
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="../assets/css/style.css" as="style">
+    <link rel="preload" href="../assets/js/main.js" as="script">
+    <link rel="preload" href="../assets/js/mcq.js" as="script">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/logo.svg" alt="StudyHub Logo">
+                    <span>StudyHub</span>
+                </a>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="solutions.html">Book Solutions</a></li>
+                    <li><a href="board-questions.html">Board Questions</a></li>
+                    <li><a href="mcq.html" class="active">MCQ Practice</a></li>
+                    <li><a href="cheatsheets.html">Cheatsheets</a></li>
+                </ul>
+            </nav>
+            
+            <div class="auth-buttons">
+                <a href="auth/login.html" class="btn btn-outline">Login</a>
+                <a href="auth/signup.html" class="btn btn-primary">Sign Up</a>
+            </div>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1>MCQ Practice Tests</h1>
+                <p>Improve your knowledge and exam readiness with our comprehensive multiple choice question banks</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MCQ Categories Section -->
+    <section class="mcq-categories">
+        <div class="container">
+            <h2>Practice by Subject</h2>
+            <div class="categories-grid">
+                <a href="mcq-subject.html?subject=mathematics" class="category-card">
+                    <div class="category-icon">
+                        <img src="../assets/images/icons/mathematics.svg" alt="Mathematics">
+                    </div>
+                    <h3>Mathematics</h3>
+                    <p>Algebra, Geometry, Calculus, Trigonometry and more</p>
+                    <span class="test-count">42 tests</span>
+                </a>
+                
+                <a href="mcq-subject.html?subject=physics" class="category-card">
+                    <div class="category-icon">
+                        <img src="../assets/images/icons/physics.svg" alt="Physics">
+                    </div>
+                    <h3>Physics</h3>
+                    <p>Mechanics, Electricity, Magnetism, Modern Physics and more</p>
+                    <span class="test-count">38 tests</span>
+                </a>
+                
+                <a href="mcq-subject.html?subject=chemistry" class="category-card">
+                    <div class="category-icon">
+                        <img src="../assets/images/icons/chemistry.svg" alt="Chemistry">
+                    </div>
+                    <h3>Chemistry</h3>
+                    <p>Organic, Inorganic, Physical Chemistry and more</p>
+                    <span class="test-count">35 tests</span>
+                </a>
+                
+                <a href="mcq-subject.html?subject=biology" class="category-card">
+                    <div class="category-icon">
+                        <img src="../assets/images/icons/biology.svg" alt="Biology">
+                    </div>
+                    <h3>Biology</h3>
+                    <p>Botany, Zoology, Human Physiology, Genetics and more</p>
+                    <span class="test-count">30 tests</span>
+                </a>
+                
+                <a href="mcq-subject.html?subject=english" class="category-card">
+                    <div class="category-icon">
+                        <img src="../assets/images/icons/english.svg" alt="English">
+                    </div>
+                    <h3>English</h3>
+                    <p>Grammar, Vocabulary, Reading Comprehension and more</p>
+                    <span class="test-count">25 tests</span>
+                </a>
+                
+                <a href="mcq-subject.html?subject=bangla" class="category-card">
+                    <div class="category-icon">
+                        <img src="../assets/images/icons/bangla.svg" alt="Bangla">
+                    </div>
+                    <h3>Bangla</h3>
+                    <p>Grammar, Literature, Comprehension and more</p>
+                    <span class="test-count">28 tests</span>
+                </a>
+                
+                <a href="mcq-subject.html?subject=ict" class="category-card">
+                    <div class="category-icon">
+                        <img src="../assets/images/icons/ict.svg" alt="ICT">
+                    </div>
+                    <h3>ICT</h3>
+                    <p>Computer Fundamentals, Programming, Database and more</p>
+                    <span class="test-count">20 tests</span>
+                </a>
+                
+                <a href="mcq-subject.html?subject=general-knowledge" class="category-card">
+                    <div class="category-icon">
+                        <img src="../assets/images/icons/gk.svg" alt="General Knowledge">
+                    </div>
+                    <h3>General Knowledge</h3>
+                    <p>Current Affairs, History, Geography and more</p>
+                    <span class="test-count">15 tests</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Tests Section -->
+    <section class="featured-tests">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Tests</h2>
+                <a href="mcq-all.html" class="view-all">View All Tests <img src="../assets/images/icons/arrow-right.svg" alt=""></a>
+            </div>
+            
+            <div class="tests-grid">
+                <div class="test-card">
+                    <div class="test-card-header">
+                        <span class="test-tag">Physics</span>
+                        <span class="test-tag">HSC</span>
+                    </div>
+                    <h3>Electromagnetism</h3>
+                    <p>Test your knowledge of electromagnetic induction, magnetic fields, and related concepts</p>
+                    <div class="test-meta">
+                        <span><img src="../assets/images/icons/question.svg" alt="Questions"> 25 questions</span>
+                        <span><img src="../assets/images/icons/clock.svg" alt="Time"> 30 minutes</span>
+                        <span><img src="../assets/images/icons/bar-chart.svg" alt="Difficulty"> Medium</span>
+                    </div>
+                    <a href="mcq-test.html?id=physics-electromagnetism" class="btn btn-primary btn-block">Start Test</a>
+                </div>
+                
+                <div class="test-card">
+                    <div class="test-card-header">
+                        <span class="test-tag">Mathematics</span>
+                        <span class="test-tag">SSC</span>
+                    </div>
+                    <h3>Quadratic Equations</h3>
+                    <p>Practice solving quadratic equations, finding roots, and understanding their properties</p>
+                    <div class="test-meta">
+                        <span><img src="../assets/images/icons/question.svg" alt="Questions"> 20 questions</span>
+                        <span><img src="../assets/images/icons/clock.svg" alt="Time"> 25 minutes</span>
+                        <span><img src="../assets/images/icons/bar-chart.svg" alt="Difficulty"> Easy</span>
+                    </div>
+                    <a href="mcq-test.html?id=math-quadratic" class="btn btn-primary btn-block">Start Test</a>
+                </div>
+                
+                <div class="test-card">
+                    <div class="test-card-header">
+                        <span class="test-tag">Chemistry</span>
+                        <span class="test-tag">HSC</span>
+                    </div>
+                    <h3>Organic Chemistry</h3>
+                    <p>Test your knowledge of organic compounds, reactions, and mechanisms</p>
+                    <div class="test-meta">
+                        <span><img src="../assets/images/icons/question.svg" alt="Questions"> 30 questions</span>
+                        <span><img src="../assets/images/icons/clock.svg" alt="Time"> 35 minutes</span>
+                        <span><img src="../assets/images/icons/bar-chart.svg" alt="Difficulty"> Hard</span>
+                    </div>
+                    <a href="mcq-test.html?id=chemistry-organic" class="btn btn-primary btn-block">Start Test</a>
+                </div>
+                
+                <div class="test-card">
+                    <div class="test-card-header">
+                        <span class="test-tag">Biology</span>
+                        <span class="test-tag">SSC</span>
+                    </div>
+                    <h3>Cell Biology</h3>
+                    <p>Practice questions on cell structure, function, and cellular processes</p>
+                    <div class="test-meta">
+                        <span><img src="../assets/images/icons/question.svg" alt="Questions"> 25 questions</span>
+                        <span><img src="../assets/images/icons/clock.svg" alt="Time"> 30 minutes</span>
+                        <span><img src="../assets/images/icons/bar-chart.svg" alt="Difficulty"> Medium</span>
+                    </div>
+                    <a href="mcq-test.html?id=biology-cell" class="btn btn-primary btn-block">Start Test</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Board Exam Prep Section -->
+    <section class="board-exam-prep">
+        <div class="container">
+            <div class="section-header">
+                <h2>Board Exam Preparation</h2>
+                <a href="mcq-board.html" class="view-all">View All <img src="../assets/images/icons/arrow-right.svg" alt=""></a>
+            </div>
+            
+            <div class="tests-grid">
+                <div class="test-card special-test">
+                    <div class="test-card-header">
+                        <span class="test-tag">SSC</span>
+                        <span class="test-tag">Full Mock</span>
+                    </div>
+                    <h3>SSC Physics Full Mock Test</h3>
+                    <p>Complete mock test following the exact SSC board exam pattern and marking scheme</p>
+                    <div class="test-meta">
+                        <span><img src="../assets/images/icons/question.svg" alt="Questions"> 50 questions</span>
+                        <span><img src="../assets/images/icons/clock.svg" alt="Time"> 60 minutes</span>
+                        <span><img src="../assets/images/icons/bar-chart.svg" alt="Difficulty"> Board Level</span>
+                    </div>
+                    <a href="mcq-test.html?id=ssc-physics-mock" class="btn btn-primary btn-block">Start Mock Test</a>
+                </div>
+                
+                <div class="test-card special-test">
+                    <div class="test-card-header">
+                        <span class="test-tag">HSC</span>
+                        <span class="test-tag">Full Mock</span>
+                    </div>
+                    <h3>HSC Mathematics Full Mock Test</h3>
+                    <p>Complete mock test following the exact HSC board exam pattern and marking scheme</p>
+                    <div class="test-meta">
+                        <span><img src="../assets/images/icons/question.svg" alt="Questions"> 50 questions</span>
+                        <span><img src="../assets/images/icons/clock.svg" alt="Time"> 60 minutes</span>
+                        <span><img src="../assets/images/icons/bar-chart.svg" alt="Difficulty"> Board Level</span>
+                    </div>
+                    <a href="mcq-test.html?id=hsc-math-mock" class="btn btn-primary btn-block">Start Mock Test</a>
+                </div>
+                
+                <div class="test-card special-test">
+                    <div class="test-card-header">
+                        <span class="test-tag">SSC</span>
+                        <span class="test-tag">Full Mock</span>
+                    </div>
+                    <h3>SSC Chemistry Full Mock Test</h3>
+                    <p>Complete mock test following the exact SSC board exam pattern and marking scheme</p>
+                    <div class="test-meta">
+                        <span><img src="../assets/images/icons/question.svg" alt="Questions"> 50 questions</span>
+                        <span><img src="../assets/images/icons/clock.svg" alt="Time"> 60 minutes</span>
+                        <span><img src="../assets/images/icons/bar-chart.svg" alt="Difficulty"> Board Level</span>
+                    </div>
+                    <a href="mcq-test.html?id=ssc-chemistry-mock" class="btn btn-primary btn-block">Start Mock Test</a>
+                </div>
+                
+                <div class="test-card special-test">
+                    <div class="test-card-header">
+                        <span class="test-tag">HSC</span>
+                        <span class="test-tag">Full Mock</span>
+                    </div>
+                    <h3>HSC Biology Full Mock Test</h3>
+                    <p>Complete mock test following the exact HSC board exam pattern and marking scheme</p>
+                    <div class="test-meta">
+                        <span><img src="../assets/images/icons/question.svg" alt="Questions"> 50 questions</span>
+                        <span><img src="../assets/images/icons/clock.svg" alt="Time"> 60 minutes</span>
+                        <span><img src="../assets/images/icons/bar-chart.svg" alt="Difficulty"> Board Level</span>
+                    </div>
+                    <a href="mcq-test.html?id=hsc-biology-mock" class="btn btn-primary btn-block">Start Mock Test</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <h2>How Our MCQ Practice Works</h2>
+            <div class="steps-container">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <img src="../assets/images/icons/select.svg" alt="Select">
+                    </div>
+                    <h3>Select a Test</h3>
+                    <p>Choose from our wide range of subject-specific tests or full mock exams based on your study needs.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <img src="../assets/images/icons/practice.svg" alt="Practice">
+                    </div>
+                    <h3>Take the Test</h3>
+                    <p>Answer multiple-choice questions within the time limit, just like in a real exam environment.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <img src="../assets/images/icons/review.svg" alt="Review">
+                    </div>
+                    <h3>Review Results</h3>
+                    <p>Get instant feedback with detailed explanations for each question and identify your weak areas.</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <img src="../assets/images/icons/improve.svg" alt="Improve">
+                    </div>
+                    <h3>Track Progress</h3>
+                    <p>Monitor your improvement over time with performance analytics and personalized recommendations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>What Our Students Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <p>"The MCQ practice tests helped me identify my weak areas in Physics. After regular practice, I scored 92% in my SSC exam!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="../assets/images/testimonials/student1.jpg" alt="Rahul Ahmed" class="author-image">
+                        <div class="author-info">
+                            <h4>Rahul Ahmed</h4>
+                            <p>SSC Student, Dhaka</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <p>"The mock tests are exactly like the real HSC exams. The detailed explanations for each question helped me understand complex Chemistry concepts."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="../assets/images/testimonials/student2.jpg" alt="Nusrat Jahan" class="author-image">
+                        <div class="author-info">
+                            <h4>Nusrat Jahan</h4>
+                            <p>HSC Student, Chittagong</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-slide">
+                    <div class="testimonial-content">
+                        <p>"I used to struggle with Mathematics, but after practicing with these MCQ tests regularly, I've improved significantly. The step-by-step explanations are excellent!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <img src="../assets/images/testimonials/student3.jpg" alt="Karim Hossain" class="author-image">
+                        <div class="author-info">
+                            <h4>Karim Hossain</h4>
+                            <p>SSC Student, Rajshahi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-controls">
+                <button class="testimonial-prev" aria-label="Previous testimonial">
+                    <img src="../assets/images/icons/arrow-left.svg" alt="Previous">
+                </button>
+                <div class="testimonial-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="testimonial-next" aria-label="Next testimonial">
+                    <img src="../assets/images/icons/arrow-right.svg" alt="Next">
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Ready to Ace Your Exams?</h2>
+                <p>Sign up now to access all MCQ tests, track your progress, and get personalized recommendations.</p>
+                <div class="cta-buttons">
+                    <a href="auth/signup.html" class="btn btn-primary">Sign Up Free</a>
+                    <a href="mcq-all.html" class="btn btn-outline">Explore All Tests</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="../assets/images/logo.svg" alt="StudyHub Logo" class="footer-logo">
+                    <p>StudyHub is the ultimate learning companion for SSC and HSC students in Bangladesh, providing comprehensive study resources.</p>
+                    <div class="social-links">
+                        <a href="#"><img src="../assets/images/icons/facebook.svg" alt="Facebook"></a>
+                        <a href="#"><img src="../assets/images/icons/instagram.svg" alt="Instagram"></a>
+                        <a href="#"><img src="../assets/images/icons/youtube.svg" alt="YouTube"></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="solutions.html">Book Solutions</a></li>
+                        <li><a href="board-questions.html">Board Questions</a></li>
+                        <li><a href="mcq.html">MCQ Practice</a></li>
+                        <li><a href="cheatsheets.html">Cheatsheets</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Study Tips</a></li>
+                        <li><a href="#">Exam Calendar</a></li>
+                        <li><a href="#">Video Tutorials</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><img src="../assets/images/icons/email.svg" alt="Email"> support@studyhub.com</p>
+                    <p><img src="../assets/images/icons/phone.svg" alt="Phone"> +880 1234 567890</p>
+                    <p><img src="../assets/images/icons/location.svg" alt="Location"> Dhaka, Bangladesh</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 StudyHub. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js" defer></script>
+    <script src="../assets/js/mcq.js" defer></script>
+</body>
+</html> 

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Access previous years' SSC & HSC board exam questions with detailed solutions and explanations">
+    <meta name="keywords" content="board questions, SSC board papers, HSC board papers, previous year questions, exam preparation">
+    <title>Board Questions | StudyHub</title>
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="../assets/css/style.css" as="style">
+    <link rel="preload" href="../assets/js/main.js" as="script">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/logo.svg" alt="StudyHub Logo">
+                    <span>StudyHub</span>
+                </a>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="solutions.html">Book Solutions</a></li>
+                    <li><a href="board-questions.html" class="active">Board Questions</a></li>
+                    <li><a href="mcq.html">MCQ Practice</a></li>
+                    <li><a href="cheatsheets.html">Cheatsheets</a></li>
+                </ul>
+            </nav>
+            
+            <div class="auth-buttons">
+                <a href="auth/login.html" class="btn btn-outline">Login</a>
+                <a href="auth/signup.html" class="btn btn-primary">Sign Up</a>
+            </div>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1>Board Questions</h1>
+                <p>Previous years' SSC & HSC board exam questions with detailed solutions and explanations</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Board Questions Filter Section -->
+    <section class="board-filter">
+        <div class="container">
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label for="examFilter">Exam</label>
+                    <select id="examFilter" class="form-select">
+                        <option value="">All Exams</option>
+                        <option value="ssc">SSC</option>
+                        <option value="hsc">HSC</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="yearFilter">Year</label>
+                    <select id="yearFilter" class="form-select">
+                        <option value="">All Years</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        <option value="2017">2017</option>
+                        <option value="2016">2016</option>
+                        <option value="2015">2015</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="boardFilter">Board</label>
+                    <select id="boardFilter" class="form-select">
+                        <option value="">All Boards</option>
+                        <option value="dhaka">Dhaka</option>
+                        <option value="rajshahi">Rajshahi</option>
+                        <option value="chittagong">Chittagong</option>
+                        <option value="khulna">Khulna</option>
+                        <option value="sylhet">Sylhet</option>
+                        <option value="barisal">Barisal</option>
+                        <option value="rangpur">Rangpur</option>
+                        <option value="mymensingh">Mymensingh</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="subjectFilter">Subject</label>
+                    <select id="subjectFilter" class="form-select">
+                        <option value="">All Subjects</option>
+                        <option value="mathematics">Mathematics</option>
+                        <option value="physics">Physics</option>
+                        <option value="chemistry">Chemistry</option>
+                        <option value="biology">Biology</option>
+                        <option value="english">English</option>
+                        <option value="bangla">Bangla</option>
+                        <option value="ict">ICT</option>
+                    </select>
+                </div>
+                
+                <button id="resetFilters" class="btn btn-outline">Reset Filters</button>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" id="questionSearch" class="form-control" placeholder="Search for questions...">
+                <button class="search-btn">
+                    <img src="../assets/images/icons/search.svg" alt="Search">
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Board Questions Content Section -->
+    <section class="board-content">
+        <div class="container">
+            <!-- Latest Board Papers -->
+            <div class="latest-papers">
+                <h2>Latest Board Papers</h2>
+                <div class="papers-grid">
+                    <div class="paper-card" data-exam="hsc" data-year="2023" data-board="dhaka" data-subject="physics">
+                        <div class="paper-card-header">
+                            <div class="paper-tags">
+                                <span class="paper-tag">HSC</span>
+                                <span class="paper-tag">2023</span>
+                                <span class="paper-tag">Dhaka</span>
+                            </div>
+                            <button class="bookmark-btn" aria-label="Bookmark this paper">
+                                <img src="../assets/images/icons/bookmark-outline.svg" alt="Bookmark">
+                            </button>
+                        </div>
+                        <h3>Physics 1st Paper</h3>
+                        <p>Complete question paper with detailed solutions and explanations</p>
+                        <div class="paper-meta">
+                            <span><img src="../assets/images/icons/eye.svg" alt="Views"> 15.2K views</span>
+                            <span><img src="../assets/images/icons/download.svg" alt="Downloads"> 8.7K downloads</span>
+                        </div>
+                        <div class="paper-actions">
+                            <a href="paper-details.html?id=hsc-2023-dhaka-physics-1" class="btn btn-primary">View Solutions</a>
+                            <a href="#" class="btn btn-outline download-btn">Download PDF</a>
+                        </div>
+                    </div>
+                    
+                    <div class="paper-card" data-exam="hsc" data-year="2023" data-board="dhaka" data-subject="mathematics">
+                        <div class="paper-card-header">
+                            <div class="paper-tags">
+                                <span class="paper-tag">HSC</span>
+                                <span class="paper-tag">2023</span>
+                                <span class="paper-tag">Dhaka</span>
+                            </div>
+                            <button class="bookmark-btn" aria-label="Bookmark this paper">
+                                <img src="../assets/images/icons/bookmark-outline.svg" alt="Bookmark">
+                            </button>
+                        </div>
+                        <h3>Mathematics 1st Paper</h3>
+                        <p>Complete question paper with step-by-step solutions</p>
+                        <div class="paper-meta">
+                            <span><img src="../assets/images/icons/eye.svg" alt="Views"> 18.5K views</span>
+                            <span><img src="../assets/images/icons/download.svg" alt="Downloads"> 10.3K downloads</span>
+                        </div>
+                        <div class="paper-actions">
+                            <a href="paper-details.html?id=hsc-2023-dhaka-math-1" class="btn btn-primary">View Solutions</a>
+                            <a href="#" class="btn btn-outline download-btn">Download PDF</a>
+                        </div>
+                    </div>
+                    
+                    <div class="paper-card" data-exam="ssc" data-year="2023" data-board="dhaka" data-subject="chemistry">
+                        <div class="paper-card-header">
+                            <div class="paper-tags">
+                                <span class="paper-tag">SSC</span>
+                                <span class="paper-tag">2023</span>
+                                <span class="paper-tag">Dhaka</span>
+                            </div>
+                            <button class="bookmark-btn" aria-label="Bookmark this paper">
+                                <img src="../assets/images/icons/bookmark-outline.svg" alt="Bookmark">
+                            </button>
+                        </div>
+                        <h3>Chemistry</h3>
+                        <p>Complete question paper with detailed solutions and explanations</p>
+                        <div class="paper-meta">
+                            <span><img src="../assets/images/icons/eye.svg" alt="Views"> 14.8K views</span>
+                            <span><img src="../assets/images/icons/download.svg" alt="Downloads"> 7.9K downloads</span>
+                        </div>
+                        <div class="paper-actions">
+                            <a href="paper-details.html?id=ssc-2023-dhaka-chemistry" class="btn btn-primary">View Solutions</a>
+                            <a href="#" class="btn btn-outline download-btn">Download PDF</a>
+                        </div>
+                    </div>
+                    
+                    <div class="paper-card" data-exam="ssc" data-year="2023" data-board="dhaka" data-subject="english">
+                        <div class="paper-card-header">
+                            <div class="paper-tags">
+                                <span class="paper-tag">SSC</span>
+                                <span class="paper-tag">2023</span>
+                                <span class="paper-tag">Dhaka</span>
+                            </div>
+                            <button class="bookmark-btn" aria-label="Bookmark this paper">
+                                <img src="../assets/images/icons/bookmark-outline.svg" alt="Bookmark">
+                            </button>
+                        </div>
+                        <h3>English 1st Paper</h3>
+                        <p>Complete question paper with model answers and explanations</p>
+                        <div class="paper-meta">
+                            <span><img src="../assets/images/icons/eye.svg" alt="Views"> 12.3K views</span>
+                            <span><img src="../assets/images/icons/download.svg" alt="Downloads"> 6.5K downloads</span>
+                        </div>
+                        <div class="paper-actions">
+                            <a href="paper-details.html?id=ssc-2023-dhaka-english-1" class="btn btn-primary">View Solutions</a>
+                            <a href="#" class="btn btn-outline download-btn">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- All Board Papers -->
+            <div class="all-papers">
+                <div class="section-header">
+                    <h2>All Board Papers</h2>
+                    <div class="view-options">
+                        <button class="view-option grid-view active" aria-label="Grid view">
+                            <img src="../assets/images/icons/grid-view.svg" alt="Grid view">
+                        </button>
+                        <button class="view-option list-view" aria-label="List view">
+                            <img src="../assets/images/icons/list-view.svg" alt="List view">
+                        </button>
+                    </div>
+                </div>
+                
+                <div id="papersContainer" class="papers-grid grid-layout">
+                    <!-- HSC 2022 Papers -->
+                    <div class="paper-card" data-exam="hsc" data-year="2022" data-board="dhaka" data-subject="physics">
+                        <div class="paper-card-header">
+                            <div class="paper-tags">
+                                <span class="paper-tag">HSC</span>
+                                <span class="paper-tag">2022</span>
+                                <span class="paper-tag">Dhaka</span>
+                            </div>
+                            <button class="bookmark-btn" aria-label="Bookmark this paper">
+                                <img src="../assets/images/icons/bookmark-outline.svg" alt="Bookmark">
+                            </button>
+                        </div>
+                        <h3>Physics 1st Paper</h3>
+                        <p>Complete question paper with detailed solutions and explanations</p>
+                        <div class="paper-meta">
+                            <span><img src="../assets/images/icons/eye.svg" alt="Views"> 22.5K views</span>
+                            <span><img src="../assets/images/icons/download.svg" alt="Downloads"> 14.2K downloads</span>
+                        </div>
+                        <div class="paper-actions">
+                            <a href="paper-details.html?id=hsc-2022-dhaka-physics-1" class="btn btn-primary">View Solutions</a>
+                            <a href="#" class="btn btn-outline download-btn">Download PDF</a>
+                        </div>
+                    </div>
+                    
+                    <div class="paper-card" data-exam="hsc" data-year="2022" data-board="dhaka" data-subject="mathematics">
+                        <div class="paper-card-header">
+                            <div class="paper-tags">
+                                <span class="paper-tag">HSC</span>
+                                <span class="paper-tag">2022</span>
+                                <span class="paper-tag">Dhaka</span>
+                            </div>
+                            <button class="bookmark-btn" aria-label="Bookmark this paper">
+                                <img src="../assets/images/icons/bookmark-outline.svg" alt="Bookmark">
+                            </button>
+                        </div>
+                        <h3>Mathematics 1st Paper</h3>
+                        <p>Complete question paper with step-by-step solutions</p>
+                        <div class="paper-meta">
+                            <span><img src="../assets/images/icons/eye.svg" alt="Views"> 25.7K views</span>
+                            <span><img src="../assets/images/icons/download.svg" alt="Downloads"> 16.3K downloads</span>
+                        </div>
+                        <div class="paper-actions">
+                            <a href="paper-details.html?id=hsc-2022-dhaka-math-1" class="btn btn-primary">View Solutions</a>
+                            <a href="#" class="btn btn-outline download-btn">Download PDF</a>
+                        </div>
+                    </div>
+                    
+                    <!-- SSC 2022 Papers -->
+                    <div class="paper-card" data-exam="ssc" data-year="2022" data-board="dhaka" data-subject="chemistry">
+                        <div class="paper-card-header">
+                            <div class="paper-tags">
+                                <span class="paper-tag">SSC</span>
+                                <span class="paper-tag">2022</span>
+                                <span class="paper-tag">Dhaka</span>
+                            </div>
+                            <button class="bookmark-btn" aria-label="Bookmark this paper">
+                                <img src="../assets/images/icons/bookmark-outline.svg" alt="Bookmark">
+                            </button>
+                        </div>
+                        <h3>Chemistry</h3>
+                        <p>Complete question paper with detailed solutions and explanations</p>
+                        <div class="paper-meta">
+                            <span><img src="../assets/images/icons/eye.svg" alt="Views"> 19.8K views</span>
+                            <span><img src="../assets/images/icons/download.svg" alt="Downloads"> 12.4K downloads</span>
+                        </div>
+                        <div class="paper-actions">
+                            <a href="paper-details.html?id=ssc-2022-dhaka-chemistry" class="btn btn-primary">View Solutions</a>
+                            <a href="#" class="btn btn-outline download-btn">Download PDF</a>
+                        </div>
+                    </div>
+                    
+                    <!-- More papers would be added here -->
+                </div>
+                
+                <!-- Load More Button -->
+                <div class="load-more-container">
+                    <button id="loadMoreBtn" class="btn btn-outline btn-load-more">Load More Papers</button>
+                </div>
+            </div>
+            
+            <!-- Board Exam Tips -->
+            <div class="board-exam-tips">
+                <h2>Board Exam Preparation Tips</h2>
+                <div class="tips-container">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <img src="../assets/images/icons/calendar.svg" alt="Calendar">
+                        </div>
+                        <h3>Create a Study Schedule</h3>
+                        <p>Divide your syllabus into manageable sections and create a realistic study schedule. Allocate more time to difficult subjects.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <img src="../assets/images/icons/practice.svg" alt="Practice">
+                        </div>
+                        <h3>Practice Previous Papers</h3>
+                        <p>Solve at least 5 years of previous board papers to understand the question pattern and improve your time management.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <img src="../assets/images/icons/notes.svg" alt="Notes">
+                        </div>
+                        <h3>Make Concise Notes</h3>
+                        <p>Create short notes with formulas, important concepts, and diagrams for quick revision in the days before the exam.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <img src="../assets/images/icons/health.svg" alt="Health">
+                        </div>
+                        <h3>Take Care of Your Health</h3>
+                        <p>Ensure you get enough sleep, eat nutritious food, and take short breaks during study sessions to maintain focus and energy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="../assets/images/logo.svg" alt="StudyHub Logo" class="footer-logo">
+                    <p>StudyHub is the ultimate learning companion for SSC and HSC students in Bangladesh, providing comprehensive study resources.</p>
+                    <div class="social-links">
+                        <a href="#"><img src="../assets/images/icons/facebook.svg" alt="Facebook"></a>
+                        <a href="#"><img src="../assets/images/icons/instagram.svg" alt="Instagram"></a>
+                        <a href="#"><img src="../assets/images/icons/youtube.svg" alt="YouTube"></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="solutions.html">Book Solutions</a></li>
+                        <li><a href="board-questions.html">Board Questions</a></li>
+                        <li><a href="mcq.html">MCQ Practice</a></li>
+                        <li><a href="cheatsheets.html">Cheatsheets</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Study Tips</a></li>
+                        <li><a href="#">Exam Calendar</a></li>
+                        <li><a href="#">Video Tutorials</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><img src="../assets/images/icons/email.svg" alt="Email"> support@studyhub.com</p>
+                    <p><img src="../assets/images/icons/phone.svg" alt="Phone"> +880 1234 567890</p>
+                    <p><img src="../assets/images/icons/location.svg" alt="Location"> Dhaka, Bangladesh</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 StudyHub. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js" defer></script>
+    
+    <!-- Board Questions Page Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Filter functionality
+            const examFilter = document.getElementById('examFilter');
+            const yearFilter = document.getElementById('yearFilter');
+            const boardFilter = document.getElementById('boardFilter');
+            const subjectFilter = document.getElementById('subjectFilter');
+            const resetFiltersBtn = document.getElementById('resetFilters');
+            const questionSearch = document.getElementById('questionSearch');
+            const paperCards = document.querySelectorAll('.paper-card');
+            
+            // Apply filters function
+            function applyFilters() {
+                const selectedExam = examFilter.value;
+                const selectedYear = yearFilter.value;
+                const selectedBoard = boardFilter.value;
+                const selectedSubject = subjectFilter.value;
+                const searchTerm = questionSearch.value.toLowerCase();
+                
+                paperCards.forEach(card => {
+                    const cardExam = card.dataset.exam;
+                    const cardYear = card.dataset.year;
+                    const cardBoard = card.dataset.board;
+                    const cardSubject = card.dataset.subject;
+                    const cardTitle = card.querySelector('h3').textContent.toLowerCase();
+                    const cardDescription = card.querySelector('p').textContent.toLowerCase();
+                    
+                    // Check if card matches all active filters
+                    const matchesExam = !selectedExam || cardExam === selectedExam;
+                    const matchesYear = !selectedYear || cardYear === selectedYear;
+                    const matchesBoard = !selectedBoard || cardBoard === selectedBoard;
+                    const matchesSubject = !selectedSubject || cardSubject === selectedSubject;
+                    const matchesSearch = !searchTerm || 
+                                         cardTitle.includes(searchTerm) || 
+                                         cardDescription.includes(searchTerm);
+                    
+                    // Show or hide card based on filter matches
+                    if (matchesExam && matchesYear && matchesBoard && matchesSubject && matchesSearch) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+            
+            // Add event listeners to filters
+            examFilter.addEventListener('change', applyFilters);
+            yearFilter.addEventListener('change', applyFilters);
+            boardFilter.addEventListener('change', applyFilters);
+            subjectFilter.addEventListener('change', applyFilters);
+            questionSearch.addEventListener('input', applyFilters);
+            
+            // Reset filters button handler
+            resetFiltersBtn.addEventListener('click', function() {
+                examFilter.value = '';
+                yearFilter.value = '';
+                boardFilter.value = '';
+                subjectFilter.value = '';
+                questionSearch.value = '';
+                
+                // Show all papers
+                paperCards.forEach(card => {
+                    card.style.display = 'block';
+                });
+            });
+            
+            // View toggle functionality
+            const gridViewBtn = document.querySelector('.grid-view');
+            const listViewBtn = document.querySelector('.list-view');
+            const papersContainer = document.getElementById('papersContainer');
+            
+            gridViewBtn.addEventListener('click', function() {
+                papersContainer.classList.remove('list-layout');
+                papersContainer.classList.add('grid-layout');
+                gridViewBtn.classList.add('active');
+                listViewBtn.classList.remove('active');
+            });
+            
+            listViewBtn.addEventListener('click', function() {
+                papersContainer.classList.remove('grid-layout');
+                papersContainer.classList.add('list-layout');
+                listViewBtn.classList.add('active');
+                gridViewBtn.classList.remove('active');
+            });
+            
+            // Bookmark functionality
+            const bookmarkBtns = document.querySelectorAll('.bookmark-btn');
+            
+            bookmarkBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const icon = this.querySelector('img');
+                    
+                    if (icon.src.includes('bookmark-outline.svg')) {
+                        icon.src = '../assets/images/icons/bookmark-filled.svg';
+                        this.setAttribute('aria-label', 'Remove bookmark');
+                    } else {
+                        icon.src = '../assets/images/icons/bookmark-outline.svg';
+                        this.setAttribute('aria-label', 'Bookmark this paper');
+                    }
+                });
+            });
+            
+            // Load more functionality
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+            let currentlyShown = 4; // Number of items initially visible
+            
+            loadMoreBtn.addEventListener('click', function() {
+                // In a real app, this would load more papers from the server
+                // For demo purposes, we'll just show a message
+                loadMoreBtn.textContent = 'Loading...';
+                
+                setTimeout(() => {
+                    loadMoreBtn.textContent = 'All Papers Loaded';
+                    loadMoreBtn.disabled = true;
+                }, 1500);
+            });
+            
+            // Download button functionality
+            const downloadBtns = document.querySelectorAll('.download-btn');
+            
+            downloadBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // In a real app, this would trigger a file download
+                    // For demo purposes, we'll just show an alert
+                    alert('Download started. The PDF will be saved to your device.');
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

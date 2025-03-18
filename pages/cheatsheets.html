@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Access concise cheatsheets for SSC & HSC subjects - Quick revision guides with formulas, concepts, and key points">
+    <meta name="keywords" content="cheatsheets, SSC study guides, HSC revision notes, exam preparation, quick reference">
+    <title>Cheatsheets | StudyHub</title>
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="../assets/css/style.css" as="style">
+    <link rel="preload" href="../assets/js/main.js" as="script">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="../index.html">
+                    <img src="../assets/images/logo.svg" alt="StudyHub Logo">
+                    <span>StudyHub</span>
+                </a>
+            </div>
+            
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="solutions.html">Book Solutions</a></li>
+                    <li><a href="board-questions.html">Board Questions</a></li>
+                    <li><a href="mcq.html">MCQ Practice</a></li>
+                    <li><a href="cheatsheets.html" class="active">Cheatsheets</a></li>
+                </ul>
+            </nav>
+            
+            <div class="auth-buttons">
+                <a href="auth/login.html" class="btn btn-outline">Login</a>
+                <a href="auth/signup.html" class="btn btn-primary">Sign Up</a>
+            </div>
+            
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1>Cheatsheets</h1>
+                <p>Concise study guides with formulas, concepts, and key points for quick revision</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cheatsheets Filter Section -->
+    <section class="cheatsheets-filter">
+        <div class="container">
+            <div class="filter-container">
+                <div class="filter-group">
+                    <label for="classFilter">Class</label>
+                    <select id="classFilter" class="form-select">
+                        <option value="">All Classes</option>
+                        <option value="class-9">Class 9 (SSC)</option>
+                        <option value="class-10">Class 10 (SSC)</option>
+                        <option value="class-11">Class 11 (HSC)</option>
+                        <option value="class-12">Class 12 (HSC)</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="subjectFilter">Subject</label>
+                    <select id="subjectFilter" class="form-select">
+                        <option value="">All Subjects</option>
+                        <option value="mathematics">Mathematics</option>
+                        <option value="physics">Physics</option>
+                        <option value="chemistry">Chemistry</option>
+                        <option value="biology">Biology</option>
+                        <option value="english">English</option>
+                        <option value="bangla">Bangla</option>
+                        <option value="ict">ICT</option>
+                    </select>
+                </div>
+                
+                <div class="filter-group">
+                    <label for="topicFilter">Topic</label>
+                    <select id="topicFilter" class="form-select" disabled>
+                        <option value="">Select Subject First</option>
+                    </select>
+                </div>
+                
+                <button id="resetFilters" class="btn btn-outline">Reset Filters</button>
+            </div>
+            
+            <div class="search-container">
+                <input type="text" id="cheatsheetSearch" class="form-control" placeholder="Search for cheatsheets...">
+                <button class="search-btn">
+                    <img src="../assets/images/icons/search.svg" alt="Search">
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cheatsheets Content Section -->
+    <section class="cheatsheets-content">
+        <div class="container">
+            <!-- View Toggle -->
+            <div class="view-toggle">
+                <button class="grid-view active" aria-label="Grid view">
+                    <img src="../assets/images/icons/grid.svg" alt="Grid View">
+                </button>
+                <button class="list-view" aria-label="List view">
+                    <img src="../assets/images/icons/list.svg" alt="List View">
+                </button>
+            </div>
+            
+            <!-- Featured Cheatsheets -->
+            <div class="featured-cheatsheets">
+                <h2>Popular Cheatsheets</h2>
+                <div id="cheatsheetsContainer" class="cheatsheets-grid grid-layout">
+                    <div class="cheatsheet-card" data-class="class-12" data-subject="physics">
+                        <div class="cheatsheet-card-header">
+                            <span class="cheatsheet-tag">Class 12</span>
+                            <span class="cheatsheet-tag">Physics</span>
+                            <button class="bookmark-btn" aria-label="Bookmark this cheatsheet">
+                                <img src="../assets/images/icons/bookmark-outline.svg" alt="Bookmark">
+                            </button>
+                        </div>
+                        <h3>Electromagnetism Formulas</h3>
+                        <p>Complete set of formulas and concepts for electromagnetic induction, magnetic fields, and related topics</p>
+                        <div class="cheatsheet-meta">
+                            <span><img src="../assets/images/icons/eye.svg" alt="Views"> 12.5K views</span>
+                            <span><img src="../assets/images/icons/download.svg" alt="Downloads"> 7.8K downloads</span>
+                        </div>
+                        <div class="cheatsheet-preview">
+                            <img src="../assets/images/cheatsheets/physics-electromagnetism.jpg" alt="Electromagnetism Cheatsheet Preview">
+                        </div>
+                        <div class="cheatsheet-actions">
+                            <a href="cheatsheet-details.html?id=physics-electromagnetism" class="btn btn-primary">View Cheatsheet</a>
+                            <a href="#" class="btn btn-outline download-btn">Download PDF</a>
+                        </div>
+                    </div>
+                    
+                    <div class="cheatsheet-card" data-class="class-10" data-subject="mathematics">
+                        <div class="cheatsheet-card-header">
+                            <span class="cheatsheet-tag">Class 10</span>
+                            <span class="cheatsheet-tag">Mathematics</span>
+                            <button class="bookmark-btn" aria-label="Bookmark this cheatsheet">
+                                <img src="../assets/images/icons/bookmark-outline.svg" alt="Bookmark">
+                            </button>
+                        </div>
+                        <h3>Trigonometry Formulas</h3>
+                        <p>All essential trigonometric identities, formulas, and their applications for SSC Mathematics</p>
+                        <div class="cheatsheet-meta">
+                            <span><img src="../assets/images/icons/eye.svg" alt="Views"> 18.3K views</span>
+                            <span><img src="../assets/images/icons/download.svg" alt="Downloads"> 10.2K downloads</span>
+                        </div>
+                        <div class="cheatsheet-preview">
+                            <img src="../assets/images/cheatsheets/math-trigonometry.jpg" alt="Trigonometry Cheatsheet Preview">
+                        </div>
+                        <div class="cheatsheet-actions">
+                            <a href="cheatsheet-details.html?id=math-trigonometry" class="btn btn-primary">View Cheatsheet</a>
+                            <a href="#" class="btn btn-outline download-btn">Download PDF</a>
+                        </div>
+                    </div>
+                    
+                    <div class="cheatsheet-card" data-class="class-12" data-subject="chemistry">
+                        <div class="cheatsheet-card-header">
+                            <span class="cheatsheet-tag">Class 12</span>
+                            <span class="cheatsheet-tag">Chemistry</span>
+                            <button class="bookmark-btn" aria-label="Bookmark this cheatsheet">
+                                <img src="../assets/images/icons/bookmark-outline.svg" alt="Bookmark">
+                            </button>
+                        </div>
+                        <h3>Organic Chemistry Reactions</h3>
+                        <p>Comprehensive guide to organic reactions, mechanisms, and named reactions for HSC Chemistry</p>
+                        <div class="cheatsheet-meta">
+                            <span><img src="../assets/images/icons/eye.svg" alt="Views"> 15.7K views</span>
+                            <span><img src="../assets/images/icons/download.svg" alt="Downloads"> 9.3K downloads</span>
+                        </div>
+                        <div class="cheatsheet-preview">
+                            <img src="../assets/images/cheatsheets/chemistry-organic.jpg" alt="Organic Chemistry Cheatsheet Preview">
+                        </div>
+                        <div class="cheatsheet-actions">
+                            <a href="cheatsheet-details.html?id=chemistry-organic" class="btn btn-primary">View Cheatsheet</a>
+                            <a href="#" class="btn btn-outline download-btn">Download PDF</a>
+                        </div>
+                    </div>
+                    
+                    <div class="cheatsheet-card" data-class="class-11" data-subject="biology">
+                        <div class="cheatsheet-card-header">
+                            <span class="cheatsheet-tag">Class 11</span>
+                            <span class="cheatsheet-tag">Biology</span>
+                            <button class="bookmark-btn" aria-label="Bookmark this cheatsheet">
+                                <img src="../assets/images/icons/bookmark-outline.svg" alt="Bookmark">
+                            </button>
+                        </div>
+                        <h3>Cell Biology Quick Reference</h3>
+                        <p>Key concepts, diagrams, and important points about cell structure, function, and division</p>
+                        <div class="cheatsheet-meta">
+                            <span><img src="../assets/images/icons/eye.svg" alt="Views"> 14.2K views</span>
+                            <span><img src="../assets/images/icons/download.svg" alt="Downloads"> 8.5K downloads</span>
+                        </div>
+                        <div class="cheatsheet-preview">
+                            <img src="../assets/images/cheatsheets/biology-cell.jpg" alt="Cell Biology Cheatsheet Preview">
+                        </div>
+                        <div class="cheatsheet-actions">
+                            <a href="cheatsheet-details.html?id=biology-cell" class="btn btn-primary">View Cheatsheet</a>
+                            <a href="#" class="btn btn-outline download-btn">Download PDF</a>
+                        </div>
+                    </div>
+                    
+                    <div class="cheatsheet-card" data-class="class-10" data-subject="english">
+                        <div class="cheatsheet-card-header">
+                            <span class="cheatsheet-tag">Class 10</span>
+                            <span class="cheatsheet-tag">English</span>
+                            <button class="bookmark-btn" aria-label="Bookmark this cheatsheet">
+                                <img src="../assets/images/icons/bookmark-outline.svg" alt="Bookmark">
+                            </button>
+                        </div>
+                        <h3>Grammar Rules & Exceptions</h3>
+                        <p>Comprehensive guide to English grammar rules, common exceptions, and usage examples</p>
+                        <div class="cheatsheet-meta">
+                            <span><img src="../assets/images/icons/eye.svg" alt="Views"> 16.8K views</span>
+                            <span><img src="../assets/images/icons/download.svg" alt="Downloads"> 9.7K downloads</span>
+                        </div>
+                        <div class="cheatsheet-preview">
+                            <img src="../assets/images/cheatsheets/english-grammar.jpg" alt="English Grammar Cheatsheet Preview">
+                        </div>
+                        <div class="cheatsheet-actions">
+                            <a href="cheatsheet-details.html?id=english-grammar" class="btn btn-primary">View Cheatsheet</a>
+                            <a href="#" class="btn btn-outline download-btn">Download PDF</a>
+                        </div>
+                    </div>
+                    
+                    <div class="cheatsheet-card" data-class="class-9" data-subject="ict">
+                        <div class="cheatsheet-card-header">
+                            <span class="cheatsheet-tag">Class 9</span>
+                            <span class="cheatsheet-tag">ICT</span>
+                            <button class="bookmark-btn" aria-label="Bookmark this cheatsheet">
+                                <img src="../assets/images/icons/bookmark-outline.svg" alt="Bookmark">
+                            </button>
+                        </div>
+                        <h3>Computer Fundamentals</h3>
+                        <p>Essential concepts, terminology, and diagrams covering computer hardware, software, and networking</p>
+                        <div class="cheatsheet-meta">
+                            <span><img src="../assets/images/icons/eye.svg" alt="Views"> 13.5K views</span>
+                            <span><img src="../assets/images/icons/download.svg" alt="Downloads"> 7.9K downloads</span>
+                        </div>
+                        <div class="cheatsheet-preview">
+                            <img src="../assets/images/cheatsheets/ict-fundamentals.jpg" alt="ICT Fundamentals Cheatsheet Preview">
+                        </div>
+                        <div class="cheatsheet-actions">
+                            <a href="cheatsheet-details.html?id=ict-fundamentals" class="btn btn-primary">View Cheatsheet</a>
+                            <a href="#" class="btn btn-outline download-btn">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Load More Button -->
+                <div class="load-more-container">
+                    <button id="loadMoreBtn" class="btn btn-outline">Load More Cheatsheets</button>
+                </div>
+            </div>
+            
+            <!-- How to Use Cheatsheets Section -->
+            <div class="how-to-use">
+                <h2>How to Use Our Cheatsheets</h2>
+                <div class="tips-container">
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <img src="../assets/images/icons/quick-revision.svg" alt="Quick Revision">
+                        </div>
+                        <h3>Quick Revision</h3>
+                        <p>Use cheatsheets for last-minute revision before exams to refresh key concepts and formulas.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <img src="../assets/images/icons/reference.svg" alt="Reference">
+                        </div>
+                        <h3>Regular Reference</h3>
+                        <p>Keep cheatsheets handy while solving problems to quickly look up formulas and methods.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <img src="../assets/images/icons/memory.svg" alt="Memory Aid">
+                        </div>
+                        <h3>Memory Aid</h3>
+                        <p>Create your own versions by rewriting our cheatsheets to reinforce memory and understanding.</p>
+                    </div>
+                    
+                    <div class="tip-card">
+                        <div class="tip-icon">
+                            <img src="../assets/images/icons/supplement.svg" alt="Supplement">
+                        </div>
+                        <h3>Study Supplement</h3>
+                        <p>Use alongside textbooks to get a concise overview of topics before deep diving into details.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Create Your Own Section -->
+            <div class="create-own">
+                <div class="create-own-content">
+                    <h2>Create Your Own Cheatsheets</h2>
+                    <p>Premium members can create and share their own cheatsheets with the StudyHub community.</p>
+                    <ul class="feature-list">
+                        <li><img src="../assets/images/icons/check.svg" alt="Check"> Use our easy cheatsheet builder</li>
+                        <li><img src="../assets/images/icons/check.svg" alt="Check"> Add formulas, diagrams, and notes</li>
+                        <li><img src="../assets/images/icons/check.svg" alt="Check"> Share with friends or keep private</li>
+                        <li><img src="../assets/images/icons/check.svg" alt="Check"> Get feedback from teachers and peers</li>
+                    </ul>
+                    <a href="auth/signup.html" class="btn btn-primary">Upgrade to Premium</a>
+                </div>
+                <div class="create-own-image">
+                    <img src="../assets/images/cheatsheet-creator.jpg" alt="Cheatsheet Creator">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="../assets/images/logo.svg" alt="StudyHub Logo" class="footer-logo">
+                    <p>StudyHub is the ultimate learning companion for SSC and HSC students in Bangladesh, providing comprehensive study resources.</p>
+                    <div class="social-links">
+                        <a href="#"><img src="../assets/images/icons/facebook.svg" alt="Facebook"></a>
+                        <a href="#"><img src="../assets/images/icons/instagram.svg" alt="Instagram"></a>
+                        <a href="#"><img src="../assets/images/icons/youtube.svg" alt="YouTube"></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="solutions.html">Book Solutions</a></li>
+                        <li><a href="board-questions.html">Board Questions</a></li>
+                        <li><a href="mcq.html">MCQ Practice</a></li>
+                        <li><a href="cheatsheets.html">Cheatsheets</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Study Tips</a></li>
+                        <li><a href="#">Exam Calendar</a></li>
+                        <li><a href="#">Video Tutorials</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contact Us</h3>
+                    <p><img src="../assets/images/icons/email.svg" alt="Email"> support@studyhub.com</p>
+                    <p><img src="../assets/images/icons/phone.svg" alt="Phone"> +880 1234 567890</p>
+                    <p><img src="../assets/images/icons/location.svg" alt="Location"> Dhaka, Bangladesh</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 StudyHub. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js" defer></script>
+    
+    <!-- Cheatsheets Page Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Filter functionality
+            const classFilter = document.getElementById('classFilter');
+            const subjectFilter = document.getElementById('subjectFilter');
+            const topicFilter = document.getElementById('topicFilter');
+            const resetFiltersBtn = document.getElementById('resetFilters');
+            const cheatsheetSearch = document.getElementById('cheatsheetSearch');
+            const cheatsheetCards = document.querySelectorAll('.cheatsheet-card');
+            
+            // Subject filter change handler
+            subjectFilter.addEventListener('change', function() {
+                const subject = this.value;
+                
+                // Reset and disable topic filter if no subject selected
+                if (!subject) {
+                    topicFilter.innerHTML = '<option value="">Select Subject First</option>';
+                    topicFilter.disabled = true;
+                    return;
+                }
+                
+                // Enable topic filter and populate options
+                topicFilter.disabled = false;
+                topicFilter.innerHTML = '<option value="">All Topics</option>';
+                
+                // Add topic options based on selected subject
+                const topics = getTopicsForSubject(subject);
+                topics.forEach(topic => {
+                    const option = document.createElement('option');
+                    option.value = topic.id;
+                    option.textContent = topic.name;
+                    topicFilter.appendChild(option);
+                });
+                
+                // Apply filters
+                applyFilters();
+            });
+            
+            // Class filter change handler
+            classFilter.addEventListener('change', applyFilters);
+            
+            // Topic filter change handler
+            topicFilter.addEventListener('change', applyFilters);
+            
+            // Search input handler
+            cheatsheetSearch.addEventListener('input', applyFilters);
+            
+            // Reset filters button handler
+            resetFiltersBtn.addEventListener('click', function() {
+                classFilter.value = '';
+                subjectFilter.value = '';
+                topicFilter.innerHTML = '<option value="">Select Subject First</option>';
+                topicFilter.disabled = true;
+                cheatsheetSearch.value = '';
+                
+                // Show all cheatsheets
+                cheatsheetCards.forEach(card => {
+                    card.style.display = 'block';
+                });
+            });
+            
+            // View toggle functionality
+            const gridViewBtn = document.querySelector('.grid-view');
+            const listViewBtn = document.querySelector('.list-view');
+            const cheatsheetsContainer = document.getElementById('cheatsheetsContainer');
+            
+            gridViewBtn.addEventListener('click', function() {
+                cheatsheetsContainer.classList.remove('list-layout');
+                cheatsheetsContainer.classList.add('grid-layout');
+                gridViewBtn.classList.add('active');
+                listViewBtn.classList.remove('active');
+            });
+            
+            listViewBtn.addEventListener('click', function() {
+                cheatsheetsContainer.classList.remove('grid-layout');
+                cheatsheetsContainer.classList.add('list-layout');
+                listViewBtn.classList.add('active');
+                gridViewBtn.classList.remove('active');
+            });
+            
+            // Bookmark functionality
+            const bookmarkBtns = document.querySelectorAll('.bookmark-btn');
+            
+            bookmarkBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const icon = this.querySelector('img');
+                    
+                    if (icon.src.includes('bookmark-outline.svg')) {
+                        icon.src = '../assets/images/icons/bookmark-filled.svg';
+                        this.setAttribute('aria-label', 'Remove bookmark');
+                    } else {
+                        icon.src = '../assets/images/icons/bookmark-outline.svg';
+                        this.setAttribute('aria-label', 'Bookmark this cheatsheet');
+                    }
+                });
+            });
+            
+            // Load more functionality
+            const loadMoreBtn = document.getElementById('loadMoreBtn');
+            
+            loadMoreBtn.addEventListener('click', function() {
+                // In a real app, this would load more cheatsheets from the server
+                // For demo purposes, we'll just show a message
+                loadMoreBtn.textContent = 'Loading...';
+                
+                setTimeout(() => {
+                    loadMoreBtn.textContent = 'All Cheatsheets Loaded';
+                    loadMoreBtn.disabled = true;
+                }, 1500);
+            });
+            
+            // Download button functionality
+            const downloadBtns = document.querySelectorAll('.download-btn');
+            
+            downloadBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // In a real app, this would trigger a file download
+                    // For demo purposes, we'll just show an alert
+                    alert('Download started. The PDF will be saved to your device.');
+                });
+            });
+            
+            // Helper function to apply all filters
+            function applyFilters() {
+                const selectedClass = classFilter.value;
+                const selectedSubject = subjectFilter.value;
+                const searchTerm = cheatsheetSearch.value.toLowerCase();
+                
+                cheatsheetCards.forEach(card => {
+                    const cardClass = card.dataset.class;
+                    const cardSubject = card.dataset.subject;
+                    const cardTitle = card.querySelector('h3').textContent.toLowerCase();
+                    const cardDescription = card.querySelector('p').textContent.toLowerCase();
+                    
+                    // Check if card matches all active filters
+                    const matchesClass = !selectedClass || cardClass === selectedClass;
+                    const matchesSubject = !selectedSubject || cardSubject === selectedSubject;
+                    const matchesSearch = !searchTerm || 
+                                         cardTitle.includes(searchTerm) || 
+                                         cardDescription.includes(searchTerm);
+                    
+                    // Show or hide card based on filter matches
+                    if (matchesClass && matchesSubject && matchesSearch) {
+                        card.style.display = 'block';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            }
+            
+            // Helper function to get topics for a subject
+            function getTopicsForSubject(subject) {
+                // In a real app, this would come from an API
+                const subjectTopics = {
+                    'mathematics': [
+                        { id: 'algebra', name: 'Algebra' },
+                        { id: 'geometry', name: 'Geometry' },
+                        { id: 'calculus', name: 'Calculus' },
+                        { id: 'trigonometry', name: 'Trigonometry' },
+                        { id: 'statistics', name: 'Statistics & Probability' }
+                    ],
+                    'physics': [
+                        { id: 'mechanics', name: 'Mechanics' },
+                        { id: 'electromagnetism', name: 'Electromagnetism' },
+                        { id: 'thermodynamics', name: 'Thermodynamics' },
+                        { id: 'optics', name: 'Optics' },
+                        { id: 'modern-physics', name: 'Modern Physics' }
+                    ],
+                    'chemistry': [
+                        { id: 'organic', name: 'Organic Chemistry' },
+                        { id: 'inorganic', name: 'Inorganic Chemistry' },
+                        { id: 'physical', name: 'Physical Chemistry' },
+                        { id: 'analytical', name: 'Analytical Chemistry' }
+                    ],
+                    'biology': [
+                        { id: 'cell-biology', name: 'Cell Biology' },
+                        { id: 'genetics', name: 'Genetics' },
+                        { id: 'human-physiology', name: 'Human Physiology' },
+                        { id: 'ecology', name: 'Ecology' },
+                        { id: 'botany', name: 'Botany' },
+                        { id: 'zoology', name: 'Zoology' }
+                    ],
+                    'english': [
+                        { id: 'grammar', name: 'Grammar' },
+                        { id: 'vocabulary', name: 'Vocabulary' },
+                        { id: 'writing', name: 'Writing' },
+                        { id: 'literature', name: 'Literature' }
+                    ],
+                    'bangla': [
+                        { id: 'grammar', name: 'Grammar' },
+                        { id: 'literature', name: 'Literature' },
+                        { id: 'poetry', name: 'Poetry' },
+                        { id: 'prose', name: 'Prose' }
+                    ],
+                    'ict': [
+                        { id: 'fundamentals', name: 'Computer Fundamentals' },
+                        { id: 'programming', name: 'Programming Basics' },
+                        { id: 'database', name: 'Database Concepts' },
+                        { id: 'networking', name: 'Networking' },
+                        { id: 'web', name: 'Web Technologies' }
+                    ]
+                };
+                
+                return subjectTopics[subject] || [];
+            }
+        });
+    </script>
+</body>
+</html> 

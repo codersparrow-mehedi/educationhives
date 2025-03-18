@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your personal dashboard on StudyHub - Track your progress and access SSC & HSC study resources">
+    <meta name="keywords" content="dashboard, student portal, SSC, HSC, Bangladesh education, progress tracking">
+    <title>Dashboard | StudyHub</title>
+    
+    <!-- Preload critical assets -->
+    <link rel="preload" href="../assets/css/style.css" as="style">
+    <link rel="preload" href="../assets/js/main.js" as="script">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/dashboard.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Chart.js for analytics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="../index.html" class="logo">
+                <img src="../assets/images/logo.svg" alt="StudyHub Logo">
+                <span>StudyHub</span>
+            </a>
+            <button class="sidebar-toggle" id="sidebarToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <div class="sidebar-content">
+            <div class="user-profile-mini">
+                <img src="../assets/images/avatar.jpg" alt="User Avatar" class="user-avatar">
+                <div class="user-info">
+                    <h3>Rahul Ahmed</h3>
+                    <span class="user-class">Class 10 • Science</span>
+                </div>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li class="active">
+                        <a href="dashboard.html">
+                            <i class="fas fa-home"></i>
+                            <span>Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="courses.html">
+                            <i class="fas fa-book"></i>
+                            <span>My Courses</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="solutions.html">
+                            <i class="fas fa-lightbulb"></i>
+                            <span>Book Solutions</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="board-questions.html">
+                            <i class="fas fa-file-alt"></i>
+                            <span>Board Questions</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="mcq.html">
+                            <i class="fas fa-tasks"></i>
+                            <span>MCQ Practice</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="cheatsheets.html">
+                            <i class="fas fa-sticky-note"></i>
+                            <span>Cheatsheets</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="profile.html">
+                            <i class="fas fa-user"></i>
+                            <span>My Profile</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="settings.html">
+                            <i class="fas fa-cog"></i>
+                            <span>Settings</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="#" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header class="main-header">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search for topics, questions, or resources...">
+            </div>
+            
+            <div class="header-actions">
+                <button class="notification-btn">
+                    <i class="fas fa-bell"></i>
+                    <span class="notification-badge">3</span>
+                </button>
+                
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </header>
+        
+        <div class="dashboard-welcome">
+            <div class="welcome-text">
+                <h1>Welcome back, Rahul! 👋</h1>
+                <p>Your learning journey continues. You've completed <span class="highlight">24 MCQ tests</span> so far.</p>
+            </div>
+            
+            <div class="quick-stats">
+                <div class="stat-item">
+                    <span class="stat-value">78%</span>
+                    <span class="stat-label">Average Score</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-value">12</span>
+                    <span class="stat-label">Day Streak</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Dashboard Content -->
+        <div class="dashboard-grid">
+            <!-- Performance Overview -->
+            <section class="dashboard-card performance-overview">
+                <div class="card-header">
+                    <h2>Performance Overview</h2>
+                    <div class="card-actions">
+                        <select id="performanceTimeRange" class="form-select">
+                            <option value="week">Last Week</option>
+                            <option value="month" selected>Last Month</option>
+                            <option value="year">Last Year</option>
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="chart-container">
+                    <canvas id="performanceChart"></canvas>
+                </div>
+            </section>
+            
+            <!-- Subject Performance -->
+            <section class="dashboard-card subject-performance">
+                <div class="card-header">
+                    <h2>Subject Performance</h2>
+                </div>
+                
+                <div class="subject-list">
+                    <div class="subject-item">
+                        <div class="subject-info">
+                            <div class="subject-icon mathematics">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <div class="subject-details">
+                                <h3>Mathematics</h3>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 85%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subject-score">85%</div>
+                    </div>
+                    
+                    <div class="subject-item">
+                        <div class="subject-info">
+                            <div class="subject-icon physics">
+                                <i class="fas fa-atom"></i>
+                            </div>
+                            <div class="subject-details">
+                                <h3>Physics</h3>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 72%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subject-score">72%</div>
+                    </div>
+                    
+                    <div class="subject-item">
+                        <div class="subject-info">
+                            <div class="subject-icon chemistry">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <div class="subject-details">
+                                <h3>Chemistry</h3>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 68%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subject-score">68%</div>
+                    </div>
+                    
+                    <div class="subject-item">
+                        <div class="subject-info">
+                            <div class="subject-icon biology">
+                                <i class="fas fa-dna"></i>
+                            </div>
+                            <div class="subject-details">
+                                <h3>Biology</h3>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subject-score">90%</div>
+                    </div>
+                    
+                    <div class="subject-item">
+                        <div class="subject-info">
+                            <div class="subject-icon english">
+                                <i class="fas fa-book-open"></i>
+                            </div>
+                            <div class="subject-details">
+                                <h3>English</h3>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="subject-score">75%</div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Recent Activity -->
+            <section class="dashboard-card recent-activity">
+                <div class="card-header">
+                    <h2>Recent Activity</h2>
+                    <a href="activity-history.html" class="view-all">View All</a>
+                </div>
+                
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon test">
+                            <i class="fas fa-clipboard-check"></i>
+                        </div>
+                        <div class="activity-details">
+                            <h3>Completed MCQ Test</h3>
+                            <p>Physics - Chapter 3: Electricity & Magnetism</p>
+                            <div class="activity-meta">
+                                <span class="activity-score">Score: 85%</span>
+                                <span class="activity-time">2 hours ago</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-icon solution">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="activity-details">
+                            <h3>Viewed Solution</h3>
+                            <p>Mathematics - Chapter 2: Geometry Problem 15</p>
+                            <div class="activity-meta">
+                                <span class="activity-time">Yesterday</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="activity-item">
+                        <div class="activity-icon download">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <div class="activity-details">
+                            <h3>Downloaded Cheatsheet</h3>
+                            <p>Chemistry - Periodic Table Elements</p>
+                            <div class="activity-meta">
+                                <span class="activity-time">2 days ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Upcoming Exams -->
+            <section class="dashboard-card upcoming-exams">
+                <div class="card-header">
+                    <h2>Upcoming Exams</h2>
+                    <a href="exam-calendar.html" class="view-all">View Calendar</a>
+                </div>
+                
+                <div class="exam-list">
+                    <div class="exam-item">
+                        <div class="exam-date">
+                            <span class="exam-day">25</span>
+                            <span class="exam-month">May</span>
+                        </div>
+                        <div class="exam-details">
+                            <h3>Physics Mid-Term</h3>
+                            <p>Chapters 1-5: Mechanics, Thermodynamics</p>
+                            <div class="exam-countdown">
+                                <i class="fas fa-clock"></i>
+                                <span>5 days left</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="exam-item">
+                        <div class="exam-date">
+                            <span class="exam-day">02</span>
+                            <span class="exam-month">Jun</span>
+                        </div>
+                        <div class="exam-details">
+                            <h3>Mathematics Quiz</h3>
+                            <p>Chapter 3: Trigonometry</p>
+                            <div class="exam-countdown">
+                                <i class="fas fa-clock"></i>
+                                <span>13 days left</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="exam-item">
+                        <div class="exam-date">
+                            <span class="exam-day">10</span>
+                            <span class="exam-month">Jun</span>
+                        </div>
+                        <div class="exam-details">
+                            <h3>English Assessment</h3>
+                            <p>Grammar and Comprehension</p>
+                            <div class="exam-countdown">
+                                <i class="fas fa-clock"></i>
+                                <span>21 days left</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Study Recommendations -->
+            <section class="dashboard-card study-recommendations">
+                <div class="card-header">
+                    <h2>Recommended for You</h2>
+                </div>
+                
+                <div class="recommendation-list">
+                    <div class="recommendation-item">
+                        <div class="recommendation-image">
+                            <img src="../assets/images/resources/physics-formulas.jpg" alt="Physics Formulas">
+                        </div>
+                        <div class="recommendation-content">
+                            <span class="recommendation-tag">Cheatsheet</span>
+                            <h3>Physics Formulas</h3>
+                            <p>Essential formulas for mechanics, electricity, and optics</p>
+                            <a href="#" class="recommendation-btn">View</a>
+                        </div>
+                    </div>
+                    
+                    <div class="recommendation-item">
+                        <div class="recommendation-image">
+                            <img src="../assets/images/resources/math-problems.jpg" alt="Math Problems">
+                        </div>
+                        <div class="recommendation-content">
+                            <span class="recommendation-tag">Practice Set</span>
+                            <h3>Calculus Problems</h3>
+                            <p>50 solved problems to master differentiation and integration</p>
+                            <a href="#" class="recommendation-btn">Start</a>
+                        </div>
+                    </div>
+                    
+                    <div class="recommendation-item">
+                        <div class="recommendation-image">
+                            <img src="../assets/images/resources/chemistry-video.jpg" alt="Chemistry Video">
+                        </div>
+                        <div class="recommendation-content">
+                            <span class="recommendation-tag">Video</span>
+                            <h3>Chemical Bonding</h3>
+                            <p>Visual explanation of covalent, ionic, and metallic bonds</p>
+                            <a href="#" class="recommendation-btn">Watch</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Study Streak -->
+            <section class="dashboard-card study-streak">
+                <div class="card-header">
+                    <h2>Study Streak</h2>
+                </div>
+                
+                <div class="streak-calendar">
+                    <div class="streak-info">
+                        <div class="streak-count">
+                            <span class="streak-number">12</span>
+                            <span class="streak-label">Day Streak</span>
+                        </div>
+                        <div class="streak-message">
+                            <p>You're on fire! Keep it up to earn more points and badges.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="streak-days">
+                        <div class="streak-day completed">
+                            <span class="day-label">Mon</span>
+                            <div class="day-indicator"><i class="fas fa-check"></i></div>
+                        </div>
+                        <div class="streak-day completed">
+                            <span class="day-label">Tue</span>
+                            <div class="day-indicator"><i class="fas fa-check"></i></div>
+                        </div>
+                        <div class="streak-day completed">
+                            <span class="day-label">Wed</span>
+                            <div class="day-indicator"><i class="fas fa-check"></i></div>
+                        </div>
+                        <div class="streak-day completed">
+                            <span class="day-label">Thu</span>
+                            <div class="day-indicator"><i class="fas fa-check"></i></div>
+                        </div>
+                        <div class="streak-day completed">
+                            <span class="day-label">Fri</span>
+                            <div class="day-indicator"><i class="fas fa-check"></i></div>
+                        </div>
+                        <div class="streak-day completed">
+                            <span class="day-label">Sat</span>
+                            <div class="day-indicator"><i class="fas fa-check"></i></div>
+                        </div>
+                        <div class="streak-day today">
+                            <span class="day-label">Sun</span>
+                            <div class="day-indicator">Today</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/dashboard.js"></script>
+</body>
+</html> 
